@@ -15,7 +15,6 @@ tieneA(brock, gyarados).
 tieneA(misty, charizard).
 tieneA(misty, carpincho).
 
-
 /*
 Consultas que podemos hacer con un solo predicado:
 ?- tieneA(ash, pikachu). %¿ash tiene a pikachu?
@@ -31,9 +30,11 @@ Consultas que podemos hacer con un solo predicado:
 
 % Reglas -> infieren según las condiciones que les demos, usamos variables 
 
+% Queremos saber quien es el mejor, decimos que todo entrenador quiere ser el mejor.
 quiereSerElMejor(Tuki):-
     entrenador(Tuki).
 
+% Ejemplo: un pokemon es bueno cuando su ataque es mayor a su defensa o bien su entrenador es poderoso.
 esBuenPokemon(Pokemon):-
     pokemon(Pokemon, Ataque, Defensa),
     Ataque > Defensa.
@@ -44,6 +45,7 @@ esBuenPokemon(Pokemon):-
 
 pokemon(pikachu, 100, 50).
 
+% Un entrenador es poderoso cuando tiene tanto Pikachu como a Charizard, o bien es Ash.
 esPoderoso(Entrenador):-
     tieneA(Entrenador, pikachu),
     tieneA(Entrenador, charizard).
@@ -56,10 +58,3 @@ esPoderoso(ash).
 Soy un comentario de varias lineas 
 :D
 */
-
-esMaestroDe(aire, aang).
-esMaestroDe(tierra, toph).
-
-esMaestroDe(tierra, aang).
-
-esMaestroDe(fuego, aang).
