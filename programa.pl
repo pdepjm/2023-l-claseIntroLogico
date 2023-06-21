@@ -30,9 +30,9 @@ Consultas que podemos hacer con un solo predicado:
 
 % Reglas -> infieren según las condiciones que les demos, usamos variables 
 
-% Queremos saber quien es el mejor, decimos que todo entrenador quiere ser el mejor.
-quiereSerElMejor(Tuki):-
-    entrenador(Tuki).
+% Queremos saber quien quiere es el mejor, decimos que todo entrenador quiere ser el mejor.
+quiereSerElMejor(Entrenador):-
+    entrenador(Entrenador).
 
 % Ejemplo: un pokemon es bueno cuando su ataque es mayor a su defensa o bien su entrenador es poderoso.
 esBuenPokemon(Pokemon):-
