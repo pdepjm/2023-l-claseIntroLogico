@@ -43,6 +43,7 @@ esBuenPokemon(Pokemon):-
     tieneA(Entrenador, Pokemon),
     esPoderoso(Entrenador).
 
+% pokemon(Nombre, Ataque, Defensa).
 pokemon(pikachu, 100, 50).
 
 % Un entrenador es poderoso cuando tiene tanto Pikachu como a Charizard, o bien es Ash.
